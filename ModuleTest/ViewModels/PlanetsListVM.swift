@@ -16,13 +16,13 @@ class PlanetsListVM {
     var request = FetchPlanetsRequest()
     var request2 = FetchPlanetsRequest()
     var request3 = FetchPlanetsRequest()
-    var requests = [RequestProtocol]()
-    let serverConfig = ServerConfig()
-    let serverConnection: ServerConnection?
+    var requests = [NetStakRequestProtocol]()
+    let serverConfig = NetStakServerConfig()
+    let serverConnection: NetStakServerConnection?
     
     // MARK: - Initializers
     init() {
-        serverConnection = ServerConnection(config: serverConfig)
+        serverConnection = NetStakServerConnection(config: serverConfig)
         request2.urlPath = "/planets/?page=2"
         request3.urlPath = "/planets/?page=3"
         requests.append(request)

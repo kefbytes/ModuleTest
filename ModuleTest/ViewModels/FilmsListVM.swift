@@ -14,12 +14,12 @@ class FilmsListVM {
     // MARK: - Properties
     var starWarsFilmsArray = [StarWarsFilm]()
     var request = FetchFilmsRequest()
-    let serverConfig = ServerConfig()
-    let serverConnection: ServerConnection?
+    let serverConfig = NetStakServerConfig()
+    let serverConnection: NetStakServerConnection?
     
     // MARK: - Initializers
     init() {
-        serverConnection = ServerConnection(config: serverConfig)
+        serverConnection = NetStakServerConnection(config: serverConfig)
     }
 
     // MARK: - Fetch functions

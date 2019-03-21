@@ -9,7 +9,7 @@
 import Foundation
 import NetStak
 
-struct FetchFilmsResponse: ResponseProtocol {
+struct FetchFilmsResponse: NetStakResponseProtocol {
     
     var urlResponse: URLResponse?
     let films: [StarWarsFilm]

@@ -9,7 +9,7 @@
 import Foundation
 import NetStak
 
-struct FetchPlanetsResponse: ResponseProtocol {
+struct FetchPlanetsResponse: NetStakResponseProtocol {
 
     var urlResponse: URLResponse?
     let planets: [StarWarsPlanet]

@@ -9,14 +9,14 @@
 import Foundation
 import NetStak
 
-struct FetchFilmsRequest: RequestProtocol {
+struct FetchFilmsRequest: NetStakRequestProtocol {
     
-    var requestTypeMethod: HTTPMethod = .get
+    var requestTypeMethod: NetStakHTTPMethod = .get
     var urlPath: String = "/films/"
     var mockFileName: String = "FetchFilms"
     var urlArguments: [URLQueryItem]? = nil
     var headerItems: [String : String]? = nil
     var requestBody: Data? =  nil
-    var responseType: ResponseProtocol.Type = FetchFilmsResponse.self
+    var responseType: NetStakResponseProtocol.Type = FetchFilmsResponse.self
 
 }

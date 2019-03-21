@@ -16,11 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             #if Dev
-                Session.environment = .dev
-                print("🤖 Session.environment = .dev")
+                NetStakSession.environment = .dev
+                print("🤖 NetStakSession.environment = .dev")
             #elseif Prod
-                Session.environment = .prod
-                print("🤖 Session.environment = .prod")
+                NetStakSession.environment = .prod
+                print("🤖 NetStakSession.environment = .prod")
             #endif
         return true
     }

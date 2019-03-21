@@ -9,7 +9,7 @@
 import Foundation
 import NetStak
 
-struct FetchCharactersResponse: ResponseProtocol {
+struct FetchCharactersResponse: NetStakResponseProtocol {
     
     var urlResponse: URLResponse?
     let characters: [StarWarsCharacter]
