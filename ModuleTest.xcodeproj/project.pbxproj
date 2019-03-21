@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AE260C142243C7A8009E4346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C132243C7A8009E4346 /* AppDelegate.swift */; };
-		AE260C312243C918009E4346 /* FrameworkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C302243C90B009E4346 /* FrameworkTest.framework */; };
-		AE260C322243C918009E4346 /* FrameworkTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C302243C90B009E4346 /* FrameworkTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AE260C3D2243CA21009E4346 /* FetchCharacters.json in Resources */ = {isa = PBXBuildFile; fileRef = AE260C3A2243CA20009E4346 /* FetchCharacters.json */; };
 		AE260C3E2243CA21009E4346 /* FetchFilms.json in Resources */ = {isa = PBXBuildFile; fileRef = AE260C3B2243CA20009E4346 /* FetchFilms.json */; };
 		AE260C3F2243CA21009E4346 /* FetchPlanets.json in Resources */ = {isa = PBXBuildFile; fileRef = AE260C3C2243CA20009E4346 /* FetchPlanets.json */; };
@@ -32,22 +30,24 @@
 		AE260C6C2243CA61009E4346 /* FilmsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C692243CA61009E4346 /* FilmsListVM.swift */; };
 		AE260C6D2243CA61009E4346 /* PlanetsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */; };
 		AE260C6E2243CA61009E4346 /* CharacterListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C6B2243CA61009E4346 /* CharacterListVM.swift */; };
+		AE260C8C2243CEED009E4346 /* NetStak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; };
+		AE260C8D2243CEED009E4346 /* NetStak.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AE260C2F2243C90B009E4346 /* PBXContainerItemProxy */ = {
+		AE260C8A2243CED6009E4346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE260C2B2243C90B009E4346 /* FrameworkTest.xcodeproj */;
+			containerPortal = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = AE260BC52243C056009E4346;
-			remoteInfo = FrameworkTest;
+			remoteGlobalIDString = AE260C792243CE82009E4346;
+			remoteInfo = NetStak;
 		};
-		AE260C332243C918009E4346 /* PBXContainerItemProxy */ = {
+		AE260C8E2243CEED009E4346 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AE260C2B2243C90B009E4346 /* FrameworkTest.xcodeproj */;
+			containerPortal = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = AE260BC42243C056009E4346;
-			remoteInfo = FrameworkTest;
+			remoteGlobalIDString = AE260C782243CE82009E4346;
+			remoteInfo = NetStak;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,7 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AE260C322243C918009E4346 /* FrameworkTest.framework in Embed Frameworks */,
+				AE260C8D2243CEED009E4346 /* NetStak.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +69,6 @@
 		AE260C102243C7A8009E4346 /* ModuleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModuleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE260C132243C7A8009E4346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE260C1F2243C7A8009E4346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE260C2B2243C90B009E4346 /* FrameworkTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FrameworkTest.xcodeproj; path = ../FrameworkTest/FrameworkTest.xcodeproj; sourceTree = "<group>"; };
 		AE260C3A2243CA20009E4346 /* FetchCharacters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchCharacters.json; sourceTree = "<group>"; };
 		AE260C3B2243CA20009E4346 /* FetchFilms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchFilms.json; sourceTree = "<group>"; };
 		AE260C3C2243CA20009E4346 /* FetchPlanets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FetchPlanets.json; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		AE260C692243CA61009E4346 /* FilmsListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsListVM.swift; sourceTree = "<group>"; };
 		AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListVM.swift; sourceTree = "<group>"; };
 		AE260C6B2243CA61009E4346 /* CharacterListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListVM.swift; sourceTree = "<group>"; };
+		AE260C862243CED6009E4346 /* NetStak.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetStak.xcodeproj; path = ../NetStak/NetStak.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE260C312243C918009E4346 /* FrameworkTest.framework in Frameworks */,
+				AE260C8C2243CEED009E4346 /* NetStak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		AE260C072243C7A8009E4346 = {
 			isa = PBXGroup;
 			children = (
-				AE260C2B2243C90B009E4346 /* FrameworkTest.xcodeproj */,
+				AE260C862243CED6009E4346 /* NetStak.xcodeproj */,
 				AE260C122243C7A8009E4346 /* ModuleTest */,
 				AE260C112243C7A8009E4346 /* Products */,
 			);
@@ -136,14 +136,6 @@
 				AE260C562243CA4B009E4346 /* UI */,
 			);
 			path = ModuleTest;
-			sourceTree = "<group>";
-		};
-		AE260C2C2243C90B009E4346 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AE260C302243C90B009E4346 /* FrameworkTest.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		AE260C382243CA20009E4346 /* Mock */ = {
@@ -234,6 +226,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		AE260C872243CED6009E4346 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE260C8B2243CED6009E4346 /* NetStak.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,7 +249,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				AE260C342243C918009E4346 /* PBXTargetDependency */,
+				AE260C8F2243CEED009E4346 /* PBXTargetDependency */,
 			);
 			name = ModuleTest;
 			productName = ModuleTest;
@@ -284,8 +284,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = AE260C2C2243C90B009E4346 /* Products */;
-					ProjectRef = AE260C2B2243C90B009E4346 /* FrameworkTest.xcodeproj */;
+					ProductGroup = AE260C872243CED6009E4346 /* Products */;
+					ProjectRef = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -296,11 +296,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AE260C302243C90B009E4346 /* FrameworkTest.framework */ = {
+		AE260C8B2243CED6009E4346 /* NetStak.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = FrameworkTest.framework;
-			remoteRef = AE260C2F2243C90B009E4346 /* PBXContainerItemProxy */;
+			path = NetStak.framework;
+			remoteRef = AE260C8A2243CED6009E4346 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -349,10 +349,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE260C342243C918009E4346 /* PBXTargetDependency */ = {
+		AE260C8F2243CEED009E4346 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FrameworkTest;
-			targetProxy = AE260C332243C918009E4346 /* PBXContainerItemProxy */;
+			name = NetStak;
+			targetProxy = AE260C8E2243CEED009E4346 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -504,6 +504,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DDev";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -523,6 +524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DProd";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetStak
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,11 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //        #if Dev
-        //            Session.environment = .dev
-        //        #elseif Prod
-        //            Session.environment = .prod
-        //        #endif
+            #if Dev
+                Session.environment = .dev
+                print("🤖 Session.environment = .dev")
+            #elseif Prod
+                Session.environment = .prod
+                print("🤖 Session.environment = .prod")
+            #endif
         return true
     }
     
