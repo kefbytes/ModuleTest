@@ -15,28 +15,28 @@ class FilmsListVM {
     var starWarsFilmsArray = [StarWarsFilm]()
     var request = FetchFilmsRequest()
     let serverConfig = ServerConfig()
-//    let serverConnection: ServerConnection?
+    let serverConnection: ServerConnection?
     
     // MARK: - Initializers
-//    init() {
-//        serverConnection = ServerConnection(config: serverConfig)
-//    }
+    init() {
+        serverConnection = ServerConnection(config: serverConfig)
+    }
 
     // MARK: - Fetch functions
-//    func fetchStarWarsFilms(completion: @escaping () -> Void) {
-//        serverConnection?.execute(with: request, and: .get) {
-//            (response, error) in
-//            if let _ = error {
-//                // present alert
-//                return
-//            }
-//            guard let fetchFilmsResponse = response as? FetchFilmsResponse else {
-//                // present alert
-//                return
-//            }
-//            self.starWarsFilmsArray = fetchFilmsResponse.films
-//            completion()
-//        }
-//    }
+    func fetchStarWarsFilms(completion: @escaping () -> Void) {
+        serverConnection?.execute(with: request, and: .get) {
+            (response, error) in
+            if let _ = error {
+                // present alert
+                return
+            }
+            guard let fetchFilmsResponse = response as? FetchFilmsResponse else {
+                // present alert
+                return
+            }
+            self.starWarsFilmsArray = fetchFilmsResponse.films
+            completion()
+        }
+    }
 
 }

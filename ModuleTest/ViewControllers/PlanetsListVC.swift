@@ -26,31 +26,21 @@ class PlanetsListVC: UIViewController {
     
     // MARK: - Fetch
     func fetchPlanets() {
-//        spinner.startAnimating()
-//        planetsListVM.fetchStarWarsPlanets {
-//            () in
-//            for planet in self.planetsListVM.starWarsPlanetsArray {
-//                guard let name = planet.name else {
-//                    continue
-//                }
-//                print(name)
-//                DispatchQueue.main.async {
-//                    self.spinner.stopAnimating()
-//                    self.planetsTableView.reloadData()
-//                }
-//            }
-//        }
+        spinner.startAnimating()
+        planetsListVM.fetchStarWarsPlanets {
+            () in
+            for planet in self.planetsListVM.starWarsPlanetsArray {
+                guard let name = planet.name else {
+                    continue
+                }
+                print(name)
+                DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+                    self.planetsTableView.reloadData()
+                }
+            }
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

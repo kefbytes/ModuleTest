@@ -27,32 +27,22 @@ class CharacterListVC: UIViewController {
     
     // MARK: - Fetch
     func fetchCharacters() {
-//        spinner.startAnimating()
-//        characterListVM.fetchStarWarsCharacters() {
-//            () in
-//            for character in self.characterListVM.starWarsCharacterArray {
-//                guard let name = character.name else {
-//                    continue
-//                }
-//                print(name)
-//                DispatchQueue.main.async {
-//                    self.spinner.stopAnimating()
-//                    self.charactersTableView.reloadData()
-//                }
-//            }
-//        }
+        spinner.startAnimating()
+        characterListVM.fetchStarWarsCharacters() {
+            () in
+            for character in self.characterListVM.starWarsCharacterArray {
+                guard let name = character.name else {
+                    continue
+                }
+                print(name)
+                DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+                    self.charactersTableView.reloadData()
+                }
+            }
+        }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
 
 // MARK: - UITableView DataSource

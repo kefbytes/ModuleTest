@@ -178,9 +178,9 @@
 		AE260C482243CA3D009E4346 /* RequestObjects */ = {
 			isa = PBXGroup;
 			children = (
+				AE260C4B2243CA3D009E4346 /* FetchCharactersRequest.swift */,
 				AE260C492243CA3D009E4346 /* FetchFilmsRequest.swift */,
 				AE260C4A2243CA3D009E4346 /* FetchPlanetsRequest.swift */,
-				AE260C4B2243CA3D009E4346 /* FetchCharactersRequest.swift */,
 			);
 			path = RequestObjects;
 			sourceTree = "<group>";
@@ -188,9 +188,9 @@
 		AE260C4C2243CA3D009E4346 /* ResponseObjects */ = {
 			isa = PBXGroup;
 			children = (
-				AE260C4D2243CA3D009E4346 /* FetchPlanetsResponse.swift */,
 				AE260C4E2243CA3D009E4346 /* FetchCharactersResponse.swift */,
 				AE260C4F2243CA3D009E4346 /* FetchFilmsResponse.swift */,
+				AE260C4D2243CA3D009E4346 /* FetchPlanetsResponse.swift */,
 			);
 			path = ResponseObjects;
 			sourceTree = "<group>";
@@ -209,9 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				AE260C602243CA56009E4346 /* CharacterListVC.swift */,
+				AE260C632243CA56009E4346 /* FilmsListVC.swift */,
 				AE260C612243CA56009E4346 /* LoginVC.swift */,
 				AE260C622243CA56009E4346 /* PlanetsListVC.swift */,
-				AE260C632243CA56009E4346 /* FilmsListVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 		AE260C682243CA61009E4346 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AE260C6B2243CA61009E4346 /* CharacterListVM.swift */,
 				AE260C692243CA61009E4346 /* FilmsListVM.swift */,
 				AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */,
-				AE260C6B2243CA61009E4346 /* CharacterListVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
