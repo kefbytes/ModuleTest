@@ -7,25 +7,26 @@
 //
 
 import Foundation
+import NetStak
 
-//struct FetchFilmsResponse: ResponseProtocol {
-//    
-//    var urlResponse: URLResponse?
-//    let films: [StarWarsFilm]
-//    
-//    init(data: Data?, urlResponse: URLResponse?) throws {
-//        if let jsonData = data {
-//            let response = try JSONDecoder().decode(StarWarsFilmsFetchResponse.self, from: jsonData)
-//            self.urlResponse = urlResponse
-//            guard let filmsArray = response.results else {
-//                self.films = [StarWarsFilm]()
-//                return
-//            }
-//            self.films = filmsArray
-//        } else {
-//            self.urlResponse = URLResponse()
-//            self.films = [StarWarsFilm]()
-//        }
-//    }
-//    
-//}
+struct FetchFilmsResponse: ResponseProtocol {
+    
+    var urlResponse: URLResponse?
+    let films: [StarWarsFilm]
+    
+    init(data: Data?, urlResponse: URLResponse?) throws {
+        if let jsonData = data {
+            let response = try JSONDecoder().decode(StarWarsFilmsFetchResponse.self, from: jsonData)
+            self.urlResponse = urlResponse
+            guard let filmsArray = response.results else {
+                self.films = [StarWarsFilm]()
+                return
+            }
+            self.films = filmsArray
+        } else {
+            self.urlResponse = URLResponse()
+            self.films = [StarWarsFilm]()
+        }
+    }
+    
+}

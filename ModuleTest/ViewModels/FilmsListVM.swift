@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import NetStak
 
 class FilmsListVM {
     
     // MARK: - Properties
     var starWarsFilmsArray = [StarWarsFilm]()
-//    var request = FetchFilmsRequest()
-//    let serverConfig = ServerConfig()
+    var request = FetchFilmsRequest()
+    let serverConfig = ServerConfig()
 //    let serverConnection: ServerConnection?
     
     // MARK: - Initializers

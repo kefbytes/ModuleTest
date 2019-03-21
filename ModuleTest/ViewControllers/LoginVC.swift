@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NetStak
 
 class LoginVC: UIViewController {
     
@@ -17,32 +18,21 @@ class LoginVC: UIViewController {
     @IBOutlet weak var discoModeSwitch: UISwitch!
     @IBOutlet weak var loginButton: UIButton!
     
-    // MARK: - Properties
-    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if Session.environment == .dev {
-//            discoModeSwitch.isHidden = false
-//            discoModeLabel.isHidden = false
-//        } else {
-//            discoModeSwitch.isHidden = true
-//            discoModeLabel.isHidden = true
-//        }
+        if Session.environment == .dev {
+            discoModeSwitch.isHidden = false
+            discoModeLabel.isHidden = false
+        } else {
+            discoModeSwitch.isHidden = true
+            discoModeLabel.isHidden = true
+        }
     }
     
     // MARK: - Actions
     @IBAction func loginAction(_ sender: Any) {
-//        Session.discoMode = discoModeSwitch.isOn
+        Session.discoMode = discoModeSwitch.isOn
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
