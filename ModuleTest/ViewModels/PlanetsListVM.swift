@@ -17,12 +17,10 @@ class PlanetsListVM {
     var request2 = FetchPlanetsRequest()
     var request3 = FetchPlanetsRequest()
     var requests = [NetStakRequestProtocol]()
-    let serverConfig = NetStakServerConfig()
-    let serverConnection: NetStakServerConnection?
-    
+    let session = NetStakSession.shared
+
     // MARK: - Initializers
     init() {
-        serverConnection = NetStakServerConnection(config: serverConfig)
         request2.urlPath = "/planets/?page=2"
         request3.urlPath = "/planets/?page=3"
         requests.append(request)
@@ -32,7 +30,7 @@ class PlanetsListVM {
     
     // MARK: - Fetch
     func fetchStarWarsPlanets(completion: @escaping () -> Void) {
-        serverConnection?.execute(withMultipleAsyncRequests: requests, and: .get) {
+        NetStakServerConnection.execute(withMultipleAsyncRequests: requests, and: .get, session: session) {
             (response, error) in
             if let _ = error {
                 // present alert

@@ -14,17 +14,11 @@ class FilmsListVM {
     // MARK: - Properties
     var starWarsFilmsArray = [StarWarsFilm]()
     var request = FetchFilmsRequest()
-    let serverConfig = NetStakServerConfig()
-    let serverConnection: NetStakServerConnection?
-    
-    // MARK: - Initializers
-    init() {
-        serverConnection = NetStakServerConnection(config: serverConfig)
-    }
+    let session = NetStakSession.shared
 
     // MARK: - Fetch functions
     func fetchStarWarsFilms(completion: @escaping () -> Void) {
-        serverConnection?.execute(with: request, and: .get) {
+        NetStakServerConnection.execute(with: request, and: .get, session: session) {
             (response, error) in
             if let _ = error {
                 // present alert

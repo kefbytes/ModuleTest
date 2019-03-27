@@ -17,11 +17,14 @@ class LoginVC: UIViewController {
     @IBOutlet weak var discoModeLabel: UILabel!
     @IBOutlet weak var discoModeSwitch: UISwitch!
     @IBOutlet weak var loginButton: UIButton!
-    
+
+    // MARK: - Properties
+    let session = NetStakSession.shared
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        if NetStakSession.environment == .dev {
+        if session.environment == .dev {
             discoModeSwitch.isHidden = false
             discoModeLabel.isHidden = false
         } else {
@@ -32,7 +35,9 @@ class LoginVC: UIViewController {
     
     // MARK: - Actions
     @IBAction func loginAction(_ sender: Any) {
-        NetStakSession.discoMode = discoModeSwitch.isOn
+        if discoModeSwitch.isOn {
+            session.environment = .mock
+        }
     }
     
 }

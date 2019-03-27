@@ -14,14 +14,12 @@ class CharacterListVM {
     // MARK: - Properties
     var starWarsCharacterArray = [StarWarsCharacter]()
     var request = FetchCharactersRequest()
-    let serverConfig = NetStakServerConfig()
-    let serverConnection: NetStakServerConnection?
+    let session = NetStakSession.shared
     let url: URL?
     
     // MARK: - Initializers
     init() {
-        serverConnection = NetStakServerConnection(config: serverConfig)
-        guard let url = NetStakURLHelper.buildURL(with: serverConfig, request: request) else {
+        guard let url = NetStakURLHelper.buildURL(with: session, request: request) else {
             // present alert
             self.url = nil
             return
@@ -35,7 +33,7 @@ class CharacterListVM {
             // present alert
             return
         }
-        serverConnection?.execute(with: url, and: request) {
+        NetStakServerConnection.execute(with: url, and: request, session: session) {
             (response, error) in
             if let _ = error {
                 // present alert
@@ -56,11 +54,11 @@ class CharacterListVM {
     func fetchNextPageOfCharacters(completion: @escaping () -> Void) {
         let queryItem = URLQueryItem(name: "page", value: "2")
         request.urlArguments = [queryItem]
-        guard let url = NetStakURLHelper.buildURL(with: serverConfig, request: request) else {
+        guard let url = NetStakURLHelper.buildURL(with: session, request: request) else {
             // present alert
             return
         }
-        serverConnection?.execute(with: url, and: request) {
+        NetStakServerConnection.execute(with: url, and: request, session: session) {
             (response, error) in
             if let _ = error {
                 // present alert

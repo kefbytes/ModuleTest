@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let session = NetStakSession.shared
             #if Dev
-                NetStakSession.environment = .dev
+                session.environment = .dev
                 print("🤖 NetStakSession.environment = .dev")
             #elseif Prod
-                NetStakSession.environment = .prod
+                session.environment = .prod
                 print("🤖 NetStakSession.environment = .prod")
             #endif
         return true
