@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     private func setBaseUrls() {
-        var baseUrls = NetStakBaseUrls.shared
+        let baseUrls = NetStakBaseUrls.shared
         baseUrls.dev = "https://swapi.co/api"
         baseUrls.qa = "https://swapi.co/api"
         baseUrls.uat = "https://swapi.co/api"
