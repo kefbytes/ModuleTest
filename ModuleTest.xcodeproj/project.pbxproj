@@ -49,6 +49,20 @@
 			remoteGlobalIDString = AE260C782243CE82009E4346;
 			remoteInfo = NetStak;
 		};
+		AEF2F0202257CD7A0090EF32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AED335292243F87D00837358;
+			remoteInfo = NetStakTests;
+		};
+		AEF2F0222257CD7A0090EF32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AED3354122441B3700837358;
+			remoteInfo = NetStakExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -230,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				AE260C8B2243CED6009E4346 /* NetStak.framework */,
+				AEF2F0212257CD7A0090EF32 /* NetStakTests.xctest */,
+				AEF2F0232257CD7A0090EF32 /* NetStakExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,6 +317,20 @@
 			fileType = wrapper.framework;
 			path = NetStak.framework;
 			remoteRef = AE260C8A2243CED6009E4346 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AEF2F0212257CD7A0090EF32 /* NetStakTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetStakTests.xctest;
+			remoteRef = AEF2F0202257CD7A0090EF32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AEF2F0232257CD7A0090EF32 /* NetStakExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = NetStakExample.app;
+			remoteRef = AEF2F0222257CD7A0090EF32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

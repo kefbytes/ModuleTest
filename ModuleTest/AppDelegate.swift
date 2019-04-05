@@ -15,14 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setBaseUrls()
         let session = NetStakSession.shared
-            #if Dev
-                session.environment = .dev
-                print("🤖 NetStakSession.environment = .dev")
-            #elseif Prod
-                session.environment = .prod
-                print("🤖 NetStakSession.environment = .prod")
-            #endif
+        #if Dev
+            session.environment = .dev
+            print("🤖 NetStakSession.environment = .dev")
+        #elseif Prod
+            session.environment = .prod
+            print("🤖 NetStakSession.environment = .prod")
+        #endif
         return true
     }
     
@@ -49,5 +50,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+}
+
+extension AppDelegate {
+    private func setBaseUrls() {
+        var baseUrls = NetStakBaseUrls.shared
+        baseUrls.dev = "https://swapi.co/api"
+        baseUrls.qa = "https://swapi.co/api"
+        baseUrls.uat = "https://swapi.co/api"
+        baseUrls.prod = "https://swapi.co/api"
+    }
 }
 
