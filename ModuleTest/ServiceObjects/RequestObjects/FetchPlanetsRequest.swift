@@ -15,7 +15,7 @@ struct FetchPlanetsRequest: NetStakRequestProtocol {
     var urlPath: String = "/planets/"
     var mockFileName: String = "FetchPlanets"
     var urlArguments: [URLQueryItem]? = nil
-    var headerItems: [String : String]? = nil
+    var headerItems: [String : String]? = ["Application/json": "Content-Type"]
     var requestBody: Data? =  nil
     var responseType: NetStakResponseProtocol.Type = FetchPlanetsResponse.self
 

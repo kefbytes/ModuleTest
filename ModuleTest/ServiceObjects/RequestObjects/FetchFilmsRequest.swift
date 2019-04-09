@@ -15,7 +15,7 @@ struct FetchFilmsRequest: NetStakRequestProtocol {
     var urlPath: String = "/films/"
     var mockFileName: String = "FetchFilms"
     var urlArguments: [URLQueryItem]? = nil
-    var headerItems: [String : String]? = nil
+    var headerItems: [String : String]? = ["Application/json": "Content-Type"]
     var requestBody: Data? =  nil
     var responseType: NetStakResponseProtocol.Type = FetchFilmsResponse.self
 

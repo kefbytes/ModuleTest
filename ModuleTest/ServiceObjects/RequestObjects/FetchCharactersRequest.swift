@@ -15,7 +15,7 @@ struct FetchCharactersRequest: NetStakRequestProtocol {
     var urlPath: String = "/people/"
     var mockFileName: String = "FetchCharacters"
     var urlArguments: [URLQueryItem]? = nil
-    var headerItems: [String : String]? = nil
+    var headerItems: [String : String]? = ["Application/json": "Content-Type"]
     var requestBody: Data? =  nil
     var responseType: NetStakResponseProtocol.Type = FetchCharactersResponse.self
 
