@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if Dev
             session.environment = .dev
             print("🤖 NetStakSession.environment = .dev")
-        #elseif Prod
+        #elseif Mock
+            session.environment = .mock
+            print("🤖 NetStakSession.environment = .mock")
+       #elseif Prod
             session.environment = .prod
             print("🤖 NetStakSession.environment = .prod")
         #endif
