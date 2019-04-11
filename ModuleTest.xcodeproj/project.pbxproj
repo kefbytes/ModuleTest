@@ -30,12 +30,13 @@
 		AE260C6C2243CA61009E4346 /* FilmsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C692243CA61009E4346 /* FilmsListVM.swift */; };
 		AE260C6D2243CA61009E4346 /* PlanetsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */; };
 		AE260C6E2243CA61009E4346 /* CharacterListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C6B2243CA61009E4346 /* CharacterListVM.swift */; };
-		AE5CA824225D2E6200AF00F1 /* NetStak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; };
-		AE5CA825225D2E6200AF00F1 /* NetStak.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEAB18BF225FA97D00C9A772 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18BE225FA97D00C9A772 /* LoginRequest.swift */; };
 		AEAB18C3225FA98F00C9A772 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18C2225FA98F00C9A772 /* LoginResponse.swift */; };
 		AEAB18C5225FA9A500C9A772 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18C4225FA9A500C9A772 /* LoginModel.swift */; };
 		AEAB18C9225FAAB200C9A772 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = AEAB18C8225FAAB200C9A772 /* Login.json */; };
+		AEAB18CC225FB08500C9A772 /* NetStak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; };
+		AEAB18CD225FB08500C9A772 /* NetStak.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEAB18D6225FB26700C9A772 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18D5225FB26700C9A772 /* LoginVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,7 @@
 			remoteGlobalIDString = AE260C792243CE82009E4346;
 			remoteInfo = NetStak;
 		};
-		AE5CA826225D2E6200AF00F1 /* PBXContainerItemProxy */ = {
+		AEAB18CE225FB08500C9A772 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE260C862243CED6009E4346 /* NetStak.xcodeproj */;
 			proxyType = 1;
@@ -70,13 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AE5CA828225D2E6200AF00F1 /* Embed Frameworks */ = {
+		AEAB18D0225FB08500C9A772 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AE5CA825225D2E6200AF00F1 /* NetStak.framework in Embed Frameworks */,
+				AEAB18CD225FB08500C9A772 /* NetStak.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +115,7 @@
 		AEAB18C2225FA98F00C9A772 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		AEAB18C4225FA9A500C9A772 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		AEAB18C8225FAAB200C9A772 /* Login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
+		AEAB18D5225FB26700C9A772 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE5CA824225D2E6200AF00F1 /* NetStak.framework in Frameworks */,
+				AEAB18CC225FB08500C9A772 /* NetStak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +250,7 @@
 				AE260C6B2243CA61009E4346 /* CharacterListVM.swift */,
 				AE260C692243CA61009E4346 /* FilmsListVM.swift */,
 				AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */,
+				AEAB18D5225FB26700C9A772 /* LoginVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,12 +275,12 @@
 				AE260C0C2243C7A8009E4346 /* Sources */,
 				AE260C0D2243C7A8009E4346 /* Frameworks */,
 				AE260C0E2243C7A8009E4346 /* Resources */,
-				AE5CA828225D2E6200AF00F1 /* Embed Frameworks */,
+				AEAB18D0225FB08500C9A772 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE5CA827225D2E6200AF00F1 /* PBXTargetDependency */,
+				AEAB18CF225FB08500C9A772 /* PBXTargetDependency */,
 			);
 			name = ModuleTest;
 			productName = ModuleTest;
@@ -296,6 +299,7 @@
 				TargetAttributes = {
 					AE260C0F2243C7A8009E4346 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -383,6 +387,7 @@
 				AEAB18BF225FA97D00C9A772 /* LoginRequest.swift in Sources */,
 				AE260C6E2243CA61009E4346 /* CharacterListVM.swift in Sources */,
 				AE260C142243C7A8009E4346 /* AppDelegate.swift in Sources */,
+				AEAB18D6225FB26700C9A772 /* LoginVM.swift in Sources */,
 				AE260C462243CA31009E4346 /* StarWarsPlanet.swift in Sources */,
 				AE260C532243CA3D009E4346 /* FetchPlanetsResponse.swift in Sources */,
 				AE260C6C2243CA61009E4346 /* FilmsListVM.swift in Sources */,
@@ -395,10 +400,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE5CA827225D2E6200AF00F1 /* PBXTargetDependency */ = {
+		AEAB18CF225FB08500C9A772 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NetStak;
-			targetProxy = AE5CA826225D2E6200AF00F1 /* PBXContainerItemProxy */;
+			targetProxy = AEAB18CE225FB08500C9A772 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,7 +503,7 @@
 				OTHER_SWIFT_FLAGS = "-DMock";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Mock;
@@ -634,7 +639,7 @@
 				OTHER_SWIFT_FLAGS = "-DDev";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -654,7 +659,7 @@
 				OTHER_SWIFT_FLAGS = "-DProd";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -735,7 +740,7 @@
 				OTHER_SWIFT_FLAGS = "-DQA";
 				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = QA;

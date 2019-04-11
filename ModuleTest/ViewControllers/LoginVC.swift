@@ -20,6 +20,8 @@ class LoginVC: UIViewController {
 
     // MARK: - Properties
     let session = NetStakSession.shared
+    var loginVM = LoginVM()
+    
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -37,6 +39,10 @@ class LoginVC: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         if discoModeSwitch.isOn {
             session.environment = .mock
+        }
+        loginVM.loginAndGetSubsctiptionKey(username: usernameTextField.text, password: passwordTextField.text) {
+            () in
+            print("🤖 Login complete")
         }
     }
     
