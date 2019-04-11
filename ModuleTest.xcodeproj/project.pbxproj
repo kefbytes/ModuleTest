@@ -32,6 +32,10 @@
 		AE260C6E2243CA61009E4346 /* CharacterListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE260C6B2243CA61009E4346 /* CharacterListVM.swift */; };
 		AE5CA824225D2E6200AF00F1 /* NetStak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; };
 		AE5CA825225D2E6200AF00F1 /* NetStak.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE260C8B2243CED6009E4346 /* NetStak.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEAB18BF225FA97D00C9A772 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18BE225FA97D00C9A772 /* LoginRequest.swift */; };
+		AEAB18C3225FA98F00C9A772 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18C2225FA98F00C9A772 /* LoginResponse.swift */; };
+		AEAB18C5225FA9A500C9A772 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB18C4225FA9A500C9A772 /* LoginModel.swift */; };
+		AEAB18C9225FAAB200C9A772 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = AEAB18C8225FAAB200C9A772 /* Login.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		AE260C6A2243CA61009E4346 /* PlanetsListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsListVM.swift; sourceTree = "<group>"; };
 		AE260C6B2243CA61009E4346 /* CharacterListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListVM.swift; sourceTree = "<group>"; };
 		AE260C862243CED6009E4346 /* NetStak.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetStak.xcodeproj; path = ../NetStak/NetStak.xcodeproj; sourceTree = "<group>"; };
+		AEAB18BE225FA97D00C9A772 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		AEAB18C2225FA98F00C9A772 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		AEAB18C4225FA9A500C9A772 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		AEAB18C8225FAAB200C9A772 /* Login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +174,7 @@
 				AE260C3A2243CA20009E4346 /* FetchCharacters.json */,
 				AE260C3B2243CA20009E4346 /* FetchFilms.json */,
 				AE260C3C2243CA20009E4346 /* FetchPlanets.json */,
+				AEAB18C8225FAAB200C9A772 /* Login.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 		AE260C402243CA31009E4346 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB18C4225FA9A500C9A772 /* LoginModel.swift */,
 				AE260C412243CA31009E4346 /* StarWarsCharacter.swift */,
 				AE260C422243CA31009E4346 /* StarWarsFilm.swift */,
 				AE260C432243CA31009E4346 /* StarWarsPlanet.swift */,
@@ -192,6 +202,7 @@
 		AE260C482243CA3D009E4346 /* RequestObjects */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB18BE225FA97D00C9A772 /* LoginRequest.swift */,
 				AE260C4B2243CA3D009E4346 /* FetchCharactersRequest.swift */,
 				AE260C492243CA3D009E4346 /* FetchFilmsRequest.swift */,
 				AE260C4A2243CA3D009E4346 /* FetchPlanetsRequest.swift */,
@@ -202,6 +213,7 @@
 		AE260C4C2243CA3D009E4346 /* ResponseObjects */ = {
 			isa = PBXGroup;
 			children = (
+				AEAB18C2225FA98F00C9A772 /* LoginResponse.swift */,
 				AE260C4E2243CA3D009E4346 /* FetchCharactersResponse.swift */,
 				AE260C4F2243CA3D009E4346 /* FetchFilmsResponse.swift */,
 				AE260C4D2243CA3D009E4346 /* FetchPlanetsResponse.swift */,
@@ -342,6 +354,7 @@
 			files = (
 				AE260C3F2243CA21009E4346 /* FetchPlanets.json in Resources */,
 				AE260C3E2243CA21009E4346 /* FetchFilms.json in Resources */,
+				AEAB18C9225FAAB200C9A772 /* Login.json in Resources */,
 				AE260C5C2243CA4B009E4346 /* Assets.xcassets in Resources */,
 				AE260C5E2243CA4B009E4346 /* Main.storyboard in Resources */,
 				AE260C5D2243CA4B009E4346 /* LaunchScreen.storyboard in Resources */,
@@ -361,10 +374,13 @@
 				AE260C672243CA56009E4346 /* FilmsListVC.swift in Sources */,
 				AE260C552243CA3D009E4346 /* FetchFilmsResponse.swift in Sources */,
 				AE260C6D2243CA61009E4346 /* PlanetsListVM.swift in Sources */,
+				AEAB18C5225FA9A500C9A772 /* LoginModel.swift in Sources */,
 				AE260C652243CA56009E4346 /* LoginVC.swift in Sources */,
+				AEAB18C3225FA98F00C9A772 /* LoginResponse.swift in Sources */,
 				AE260C642243CA56009E4346 /* CharacterListVC.swift in Sources */,
 				AE260C442243CA31009E4346 /* StarWarsCharacter.swift in Sources */,
 				AE260C522243CA3D009E4346 /* FetchCharactersRequest.swift in Sources */,
+				AEAB18BF225FA97D00C9A772 /* LoginRequest.swift in Sources */,
 				AE260C6E2243CA61009E4346 /* CharacterListVM.swift in Sources */,
 				AE260C142243C7A8009E4346 /* AppDelegate.swift in Sources */,
 				AE260C462243CA31009E4346 /* StarWarsPlanet.swift in Sources */,
@@ -643,6 +659,87 @@
 			};
 			name = Release;
 		};
+		AEAB18CA225FAE8600C9A772 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = QA;
+		};
+		AEAB18CB225FAE8600C9A772 /* QA */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6WUZ2D4QXV;
+				INFOPLIST_FILE = ModuleTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "-DQA";
+				PRODUCT_BUNDLE_IDENTIFIER = "KefBytes-LLC.ModuleTest";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = QA;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,6 +747,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE260C202243C7A8009E4346 /* Debug */,
+				AEAB18CA225FAE8600C9A772 /* QA */,
 				AE0784C4225D2C550041DCEE /* Mock */,
 				AE260C212243C7A8009E4346 /* Release */,
 			);
@@ -660,6 +758,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE260C232243C7A8009E4346 /* Debug */,
+				AEAB18CB225FAE8600C9A772 /* QA */,
 				AE0784C5225D2C550041DCEE /* Mock */,
 				AE260C242243C7A8009E4346 /* Release */,
 			);

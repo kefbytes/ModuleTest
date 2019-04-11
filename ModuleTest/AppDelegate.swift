@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if Dev
             session.environment = .dev
             print("🤖 NetStakSession.environment = .dev")
+        #elseif QA
+            session.environment = .qa
+            print("🤖 NetStakSession.environment = .qa")
         #elseif Mock
             session.environment = .mock
             print("🤖 NetStakSession.environment = .mock")
@@ -59,7 +62,7 @@ extension AppDelegate {
     private func setBaseUrls() {
         let baseUrls = NetStakBaseUrls.shared
         baseUrls.dev = "https://swapi.co/api"
-        baseUrls.qa = "https://swapi.co/api"
+        baseUrls.qa = "https://ecomdash.azure-api.net/"
         baseUrls.uat = "https://swapi.co/api"
         baseUrls.prod = "https://swapi.co/api"
     }

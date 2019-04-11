@@ -16,8 +16,8 @@ struct FetchCharactersResponse: NetStakResponseProtocol {
     
     init(data: Data?, urlResponse: URLResponse?) throws {
         if let jsonData = data {
-            let response = try JSONDecoder().decode(StarWarsCharactersFetchResponse.self, from: jsonData)
             self.urlResponse = urlResponse
+            let response = try JSONDecoder().decode(StarWarsCharactersFetchResponse.self, from: jsonData)
             guard let characterArray = response.results else {
                 self.characters = [StarWarsCharacter]()
                 return
