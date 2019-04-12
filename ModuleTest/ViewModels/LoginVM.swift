@@ -22,7 +22,7 @@ struct LoginVM {
             return
         }
         loginRequest.requestBody = httpBody
-        NetStakServerConnection.execute(with: loginRequest, and: .post, session: session) {
+        NetStakServerConnection.execute(with: loginRequest, and: session) {
             (response, error) in
             if let _ = error {
                 // present alert

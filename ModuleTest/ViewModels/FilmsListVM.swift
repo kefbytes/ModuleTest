@@ -18,7 +18,7 @@ class FilmsListVM {
 
     // MARK: - Fetch functions
     func fetchStarWarsFilms(completion: @escaping () -> Void) {
-        NetStakServerConnection.execute(with: request, and: .get, session: session) {
+        NetStakServerConnection.execute(with: request, and: session) {
             (response, error) in
             if let _ = error {
                 // present alert

@@ -30,7 +30,7 @@ class PlanetsListVM {
     
     // MARK: - Fetch
     func fetchStarWarsPlanets(completion: @escaping () -> Void) {
-        NetStakServerConnection.execute(withMultipleAsyncRequests: requests, and: .get, session: session) {
+        NetStakServerConnection.execute(withMultipleAsyncRequests: requests, and: session) {
             (response, error) in
             if let _ = error {
                 // present alert
