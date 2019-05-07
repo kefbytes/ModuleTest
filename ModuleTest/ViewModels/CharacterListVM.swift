@@ -34,19 +34,21 @@ class CharacterListVM {
             return
         }
         NetStakServerConnection.execute(with: url, and: request, session: session) {
-            (response, error) in
-            if let _ = error {
+            result in
+            switch result {
+            case .success(let response):
+                guard let fetchCharactersResponse = response as? FetchCharactersResponse else {
+                    // present alert
+                    return
+                }
+                self.starWarsCharacterArray = fetchCharactersResponse.characters
+                self.fetchNextPageOfCharacters() {
+                    () in
+                    completion()
+                }
+            case .failure(let error):
+                let _ = error.localizedDescription
                 // present alert
-                return
-            }
-            guard let fetchCharactersResponse = response as? FetchCharactersResponse else {
-                // present alert
-                return
-            }
-            self.starWarsCharacterArray = fetchCharactersResponse.characters
-            self.fetchNextPageOfCharacters() {
-                () in
-                completion()
             }
         }
     }
@@ -59,17 +61,19 @@ class CharacterListVM {
             return
         }
         NetStakServerConnection.execute(with: url, and: request, session: session) {
-            (response, error) in
-            if let _ = error {
+            result in
+            switch result {
+            case .success(let response):
+                guard let fetchCharactersResponse = response as? FetchCharactersResponse else {
+                    // present alert
+                    return
+                }
+                self.starWarsCharacterArray.append(contentsOf: fetchCharactersResponse.characters)
+                completion()
+            case .failure(let error):
+                let _ = error.localizedDescription
                 // present alert
-                return
             }
-            guard let fetchCharactersResponse = response as? FetchCharactersResponse else {
-                // present alert
-                return
-            }
-            self.starWarsCharacterArray.append(contentsOf: fetchCharactersResponse.characters)
-            completion()
         }
     }
     

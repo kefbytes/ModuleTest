@@ -23,21 +23,23 @@ struct LoginVM {
         }
         loginRequest.requestBody = httpBody
         NetStakServerConnection.execute(with: loginRequest, and: session) {
-            (response, error) in
-            if let _ = error {
+            result in
+            switch result {
+            case .success(let response):
+                guard let loginResponse = response as? LoginResponse else {
+                    // present alert
+                    return
+                }
+                guard let key = loginResponse.loginModel?.subscriptionKey else {
+                    return
+                }
+                let defaults = UserDefaults.standard
+                defaults.setValue(key, forKey: "userDefaultsEcdSubscriptionKey")
+                completion()
+            case .failure(let error):
+                let _ = error.localizedDescription
                 // present alert
-                return
             }
-            guard let loginResponse = response as? LoginResponse else {
-                // present alert
-                return
-            }
-            guard let key = loginResponse.loginModel?.subscriptionKey else {
-                return
-            }
-            let defaults = UserDefaults.standard
-            defaults.setValue(key, forKey: "userDefaultsEcdSubscriptionKey")
-            completion()
         }
     }
 

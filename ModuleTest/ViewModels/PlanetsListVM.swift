@@ -31,27 +31,29 @@ class PlanetsListVM {
     // MARK: - Fetch
     func fetchStarWarsPlanets(completion: @escaping () -> Void) {
         NetStakServerConnection.execute(withMultipleAsyncRequests: requests, and: session) {
-            (response, error) in
-            if let _ = error {
-                // present alert
-                return
-            }
-            if let fetchPlanetsResponse1 = response?[self.requests[0].urlPath] as? FetchPlanetsResponse {
-                self.starWarsPlanetsArray = fetchPlanetsResponse1.planets
-            }
-            if let fetchPlanetsResponse2 = response?[self.requests[1].urlPath] as? FetchPlanetsResponse {
-                self.starWarsPlanetsArray += fetchPlanetsResponse2.planets
-            }
-            if let fetchPlanetsResponse3 = response?[self.requests[2].urlPath] as? FetchPlanetsResponse {
-                self.starWarsPlanetsArray += fetchPlanetsResponse3.planets
-            }
-            self.starWarsPlanetsArray = self.starWarsPlanetsArray.sorted {
-                guard let name1 = $0.name, let name2 = $1.name else {
-                    return false
+            result in
+            switch result {
+            case .success(let response):
+                if let fetchPlanetsResponse1 = response[self.requests[0].urlPath] as? FetchPlanetsResponse {
+                    self.starWarsPlanetsArray = fetchPlanetsResponse1.planets
                 }
-                return name1 < name2
+                if let fetchPlanetsResponse2 = response[self.requests[1].urlPath] as? FetchPlanetsResponse {
+                    self.starWarsPlanetsArray += fetchPlanetsResponse2.planets
+                }
+                if let fetchPlanetsResponse3 = response[self.requests[2].urlPath] as? FetchPlanetsResponse {
+                    self.starWarsPlanetsArray += fetchPlanetsResponse3.planets
+                }
+                self.starWarsPlanetsArray = self.starWarsPlanetsArray.sorted {
+                    guard let name1 = $0.name, let name2 = $1.name else {
+                        return false
+                    }
+                    return name1 < name2
+                }
+                completion()
+            case .failure(let error):
+                let _ = error.localizedDescription
+                // present alert
             }
-            completion()
         }
     }
 

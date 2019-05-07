@@ -19,17 +19,19 @@ class FilmsListVM {
     // MARK: - Fetch functions
     func fetchStarWarsFilms(completion: @escaping () -> Void) {
         NetStakServerConnection.execute(with: request, and: session) {
-            (response, error) in
-            if let _ = error {
+            result in
+            switch result {
+            case .success(let response):
+                guard let fetchFilmsResponse = response as? FetchFilmsResponse else {
+                    // present alert
+                    return
+                }
+                self.starWarsFilmsArray = fetchFilmsResponse.films
+                completion()
+            case .failure(let error):
+                let _ = error.localizedDescription
                 // present alert
-                return
             }
-            guard let fetchFilmsResponse = response as? FetchFilmsResponse else {
-                // present alert
-                return
-            }
-            self.starWarsFilmsArray = fetchFilmsResponse.films
-            completion()
         }
     }
 
